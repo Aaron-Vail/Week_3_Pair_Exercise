@@ -6,6 +6,7 @@ public class DollarAmount {
     
     private int totalAmountInCents;
     
+    
     public DollarAmount(int totalAmountInCents) {
         this.totalAmountInCents = totalAmountInCents;
     }
@@ -69,5 +70,21 @@ public class DollarAmount {
     public int hashCode() {
     	return totalAmountInCents;
     }
-    
+
+	@Override
+	public String toString() {
+		if(isNegative()) {
+			if(getCents() > -10) {
+				return "-" +"$" + Math.abs(getDollars()) + "." + "0" + Math.abs(getCents());
+			} else {
+				return "-" +"$" + Math.abs(getDollars()) + "." + Math.abs(getCents());
+			}
+		} else if (getCents() > 9) {
+			return  "$" + getDollars() + "." + getCents();
+		} else {
+			return  "$" + getDollars() + ".0" + getCents();
+		}
+		
+	}
+     
 }
