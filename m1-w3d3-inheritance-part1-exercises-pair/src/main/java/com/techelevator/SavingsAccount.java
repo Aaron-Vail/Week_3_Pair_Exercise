@@ -2,6 +2,8 @@ package com.techelevator;
 
 public class SavingsAccount extends BankAccount {
 
+	private String accountType = "Savings";
+	
 	@Override
 	public DollarAmount withdraw(DollarAmount amountToWithdraw) {
 		
@@ -33,5 +35,16 @@ public class SavingsAccount extends BankAccount {
 		return getBalance();
 		
 	}
+
+	public String getAccountType() {
+		return accountType;
+	}
+	
+	@Override
+	public String toString() {
+		return accountType;
+	}
+	
+	
 	
 }

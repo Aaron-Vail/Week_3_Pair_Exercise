@@ -2,7 +2,7 @@ package com.techelevator;
 
 public class CheckingAccount extends BankAccount {
 	
-	
+	private String accountType = "Checking";
 	
 	@Override
 	public DollarAmount withdraw(DollarAmount amountToWithdraw) {
@@ -20,5 +20,16 @@ public class CheckingAccount extends BankAccount {
 		return getBalance();
 		
 	}
+
+	public String getAccountType() {
+		return accountType;
+	}
+
+	@Override
+	public String toString() {
+		return accountType;
+	}
+	
+	
 	
 }

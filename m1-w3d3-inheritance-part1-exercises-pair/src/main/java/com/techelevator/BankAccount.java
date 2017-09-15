@@ -5,6 +5,7 @@ public class BankAccount {
 		//instance variables
 		private String accountNumber;
 		private DollarAmount balance = new DollarAmount(0);
+		private String accountType;
 		
 		//constructor
 		public BankAccount() {
@@ -38,6 +39,13 @@ public class BankAccount {
 			return balance;
 		}
 		
+		public String getAccountType() {
+			return accountType;
+		}
 		
+		@Override
+		public String toString() {
+			return accountType;
+		}
 		
 }
